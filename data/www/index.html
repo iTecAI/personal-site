@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dax Harris - A Curated Collection</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="index.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="code-header noscroll">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="number">1</td>
+                        <td class="code">
+                            <span class="call">@dataclass</span>()
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">2</td>
+                        <td class="code">
+                            <span class="declarator">class</span>
+                            <span class="variable">DaxHarris</span>:
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">3</td>
+                        <td class="code">
+                            <span class="tab"></span>
+                            <span class="variable">education</span>:
+                            <span class="declarator">str</span> =
+                            <span class="literal-string"
+                                >"Computer Science @ RIT"</span
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">4</td>
+                        <td class="code">
+                            <span class="tab"></span>
+                            <span class="variable">projects</span>:
+                            <span class="declarator">int</span> =
+                            <span class="literal-int" id="count-projects"
+                                >...</span
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">5</td>
+                        <td class="code">
+                            <span class="tab"></span>
+                            <span class="variable">experience</span>:
+                            <span class="declarator">list</span>[<span
+                                class="declarator"
+                                >str</span
+                            >] = [
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">6</td>
+                        <td class="code">
+                            <span class="tab"></span><span class="tab"></span>
+                            <span class="literal-string"
+                                >"Consultation for InData Corp (1+ years)"</span
+                            >,
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">7</td>
+                        <td class="code">
+                            <span class="tab"></span><span class="tab"></span>
+                            <span class="literal-string"
+                                >"Director of MetroHacks Women NYC Hackathon
+                                (0.5 years)"</span
+                            >,
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">8</td>
+                        <td class="code">
+                            <span class="tab"></span><span class="tab"></span>
+                            <span class="literal-string"
+                                >"Participation in RIT Computer Science House
+                                (Ongoing)"</span
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">9</td>
+                        <td class="code">
+                            <span class="tab"></span>
+                            ]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">10</td>
+                        <td class="code">
+                            <span class="tab"></span>
+                            <span class="variable">skills</span>:
+                            <span class="declarator">list</span>[<span
+                                class="declarator"
+                                >str</span
+                            >] = [<span class="literal-string">"Python 3"</span
+                            >,
+                            <span class="literal-string">"HTML/CSS/JS"</span>,
+                            <span class="literal-string">"React.JS"</span>,
+                            <span class="literal-string">"Java"</span>,
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">11</td>
+                        <td class="code">
+                            <span class="tab"></span><span class="tab"></span>
+                            <span class="literal-string">"MongoDB"</span>,
+                            <span class="literal-string">"SQL"</span>,
+                            <span class="literal-string"
+                                >"OpenShift / Kubernetes"</span
+                            >, <span class="literal-string">"Docker"</span>,
+                            <span class="literal-string">"Raspberry Pi"</span>]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="number">12</td>
+                        <td class="code"></td>
+                    </tr>
+                    <tr>
+                        <td class="number">13</td>
+                        <td class="code">
+                            <span class="call">print</span>(<span
+                                class="declarator"
+                                >random</span
+                            >.<span class="variable">choice</span>(<span
+                                class="variable"
+                                >DaxHarris</span
+                            >.<span class="variable">skills</span>))
+                            <span class="comment"
+                                ># ->
+                                <span id="random-skill">Python 3</span></span
+                            >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="main-page">
+            <div class="personal">
+                <img
+                    class="dax-icon"
+                    src="https://avatars.githubusercontent.com/u/30746447?v=4"
+                    alt="Dax's picture"
+                />
+                <span class="dax-name">Dax V. Harris</span>
+                <span class="dax-username"
+                    ><a href="https://github.com/itecai" target="_blank"
+                        >@iTecAI</a
+                    ></span
+                >
+            </div>
+        </div>
+    </body>
+</html>

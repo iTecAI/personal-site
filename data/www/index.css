@@ -1,0 +1,177 @@
+:root {
+    --p: #6a1b9a;
+    --pl: #9c4dcc;
+    --pd: #38006b;
+    --pt: #ffffff;
+
+    --b: #263238;
+    --bl: #4f5b62;
+    --bd: #000f1b;
+    --bd2: #000a12;
+    --bt: #ffffff;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+.noscroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noscroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.code-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--bd2);
+    font-family: monospace;
+    display: inline-block;
+    width: 100%;
+    height: 377px;
+    color: var(--bt);
+    font-size: 16px;
+    overflow-x: auto;
+    z-index: -1;
+}
+.code-header table {
+    border-collapse: collapse;
+}
+.code-header table,
+th,
+td {
+    border: none;
+}
+.code-header td.number {
+    background-color: var(--bd);
+    text-align: right;
+}
+.code-header td {
+    padding: 5px;
+}
+
+.code {
+    white-space: nowrap;
+}
+
+/* Syntax Highlighting */
+.code .call {
+    color: rgb(221, 221, 124);
+}
+.code .declarator {
+    color: lightseagreen;
+}
+.code .variable {
+    color: lightskyblue;
+}
+.code .literal-string {
+    color: rgb(216, 89, 89);
+}
+.code .literal-int {
+    color: lightseagreen;
+}
+.code .tab {
+    margin-right: 50px;
+}
+.code .comment {
+    color: var(--bt);
+    opacity: 0.4;
+}
+
+#main-page {
+    z-index: 10;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+}
+#main-page * {
+    z-index: inherit;
+}
+
+#main-page .personal {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 377px;
+    background-color: #22222255;
+}
+@media only screen and (min-width: 800px) {
+    #main-page .personal .dax-icon {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        display: inline-block;
+        width: 307px;
+        height: 307px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .personal .dax-name {
+        color: var(--bt);
+        font-size: 4em;
+        font-weight: 300;
+        position: absolute;
+        top: 120px;
+        right: 377px;
+    }
+    .personal .dax-username {
+        color: var(--bt);
+        opacity: 0.7;
+        font-size: 2em;
+        font-weight: 300;
+        position: absolute;
+        top: calc(130px + 2em);
+        right: 377px;
+    }
+    .personal .dax-username a {
+        color: var(--bt);
+    }
+}
+@media only screen and (max-width: 800px) {
+    #main-page .personal .dax-icon {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .personal .dax-name {
+        color: var(--bt);
+        font-size: 2.3em;
+        font-weight: 400;
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        white-space: nowrap;
+    }
+    .personal .dax-username {
+        color: var(--bt);
+        opacity: 0.7;
+        font-size: 1.5em;
+        font-weight: 400;
+        position: absolute;
+        top: calc(180px + 2.3em);
+        left: 50%;
+        transform: translate(-50%, 0);
+        white-space: nowrap;
+    }
+    .personal .dax-username a {
+        color: var(--bt);
+    }
+}
