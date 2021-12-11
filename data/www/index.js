@@ -68,6 +68,72 @@ function updateNav() {
     }
 }
 
+async function get_projects() {
+    var manifest = await $.get("./data/manifest.json");
+    var section = $('<div class="section-content"></div>');
+    var converter = new showdown.Converter({
+        openLinksInNewWindow: true,
+    });
+    for (var p of manifest.projects) {
+        var content = await $.get("./data/" + p.description);
+        section.append(
+            $("<div class='item'></div>")
+                .append($('<span class="title"></span>').text(p.title))
+                .append(
+                    $('<img class="image">').attr({
+                        src: "./data/" + p.image,
+                        alt: "Project image.",
+                    })
+                )
+                .append(
+                    $('<div class="description"></div>').html(
+                        converter.makeHtml(content)
+                    )
+                )
+                .append(
+                    $('<a class="link"></a>')
+                        .attr("href", p.link)
+                        .attr("target", "_blank")
+                        .append($('<span class="material-icons">link</span>'))
+                )
+        );
+    }
+    return section;
+}
+
+async function get_experiences() {
+    var manifest = await $.get("./data/manifest.json");
+    var section = $('<div class="section-content"></div>');
+    var converter = new showdown.Converter({
+        openLinksInNewWindow: true,
+    });
+    for (var p of manifest.experience) {
+        var icon = p.icon;
+        console.log(icon);
+        var content = await $.get("./data/" + p.description);
+        section.append(
+            $("<div class='item'></div>")
+                .append(
+                    $('<span class="title"></span>')
+                        .text(p.title)
+                        .append(
+                            $(
+                                "<span class='material-icons'>" +
+                                    icon +
+                                    "</span>"
+                            )
+                        )
+                )
+                .append(
+                    $('<div class="description"></div>').html(
+                        converter.makeHtml(content)
+                    )
+                )
+        );
+    }
+    return section;
+}
+
 $(document).ready(function () {
     get_len_projects("itecai").then((l) => $("#count-projects").text(l));
     window.setInterval(function () {
@@ -88,4 +154,6 @@ $(document).ready(function () {
         setTimeout(updateNav, 300);
     });
     $(window).on("wheel", updateNav);
+    get_projects().then((s) => s.replaceAll(".projects .section-content"));
+    get_experiences().then((s) => s.replaceAll(".experience .section-content"));
 });

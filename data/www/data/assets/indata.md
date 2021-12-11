@@ -1,0 +1,1 @@
+I consulted for InData Corp, working on several projects that spanned full-stack, frontend, and backend development. Some of the highlights were a Twitter news aggregation system to fetch and aggregate news links from Twitter posts, and a pro-bono frontend project for a NYC childrens' advocates organization.

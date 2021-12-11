@@ -1,0 +1,1 @@
+Jumpstart is a rewrite of the current CSH dashboard. The backend uses FastAPI and MongoDB, and the frontend uses React.JS. Additionally, the frontend utilizes a Datadog integration for server montitoring, and integration with several other remote APIs.

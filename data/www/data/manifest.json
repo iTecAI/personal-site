@@ -1,0 +1,45 @@
+{
+    "projects": [
+        {
+            "title": "Jumpstart-Next",
+            "description": "assets/jumpstart.md",
+            "image": "assets/jumpstart.png",
+            "link": "https://github.com/ComputerScienceHouse/Jumpstart-Next"
+        },
+        {
+            "title": "CSH Calendar 2",
+            "description": "assets/ccal2.md",
+            "image": "assets/ccal2.png",
+            "link": "https://github.com/ComputerScienceHouse/csh-calendar-2"
+        },
+        {
+            "title": "XL4",
+            "description": "assets/xl4.md",
+            "image": "assets/xl4.png",
+            "link": "https://github.com/iTecAI/XL4"
+        },
+        {
+            "title": "P2P Local",
+            "description": "assets/p2plocal.md",
+            "image": "assets/p2plocal.png",
+            "link": "https://github.com/iTecAI/p2p-local"
+        }
+    ],
+    "experience": [
+        {
+            "title": "Consultation - InData",
+            "icon": "work",
+            "description": "assets/indata.md"
+        },
+        {
+            "title": "Director - MetroHacks Women NYC",
+            "icon": "volunteer_activism",
+            "description": "assets/metrohacks.md"
+        },
+        {
+            "title": "Active Member - Computer Science House @ RIT",
+            "icon": "school",
+            "description": "assets/csh.md"
+        }
+    ]
+}

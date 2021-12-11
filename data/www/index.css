@@ -373,7 +373,7 @@ td {
         top: 0px;
         display: inline-block;
         width: 15%;
-        height: fit-content;
+        height: 377px;
         background-color: var(--md);
         margin: 0px;
         vertical-align: top;
@@ -442,4 +442,120 @@ td {
     top: 50%;
     left: 34px;
     transform: translate(0, -50%);
+}
+
+@media only screen and (min-width: 1650px) {
+    .content .projects .container .section-content .item {
+        padding: 10px;
+        display: inline-block;
+        position: relative;
+        width: calc((100% / 2) - 40px);
+        height: fit-content;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        background-color: var(--md);
+        vertical-align: top;
+    }
+}
+@media only screen and (max-width: 1649px) {
+    .content .projects .container .section-content .item {
+        padding: 10px;
+        display: inline-block;
+        position: relative;
+        width: calc(100% - 40px);
+        height: fit-content;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        background-color: var(--md);
+        vertical-align: top;
+    }
+}
+.content .projects .container .section-content .item .image {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: auto;
+}
+.content .projects .container .section-content .item .title {
+    display: block;
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--pl);
+    margin-bottom: 10px;
+    font-family: "Courier New", Courier, monospace;
+}
+.content .projects .container .section-content .item .description {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 10px);
+    margin-left: 10px;
+    vertical-align: top;
+    height: auto;
+}
+.content .projects .container .section-content .item .link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--p);
+}
+
+.content .experience .container .section-content .item {
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 40px);
+    height: fit-content;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: var(--md);
+    vertical-align: top;
+}
+.content .experience .container .section-content .item .title .material-icons {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+}
+.content .experience .container .section-content .item .title {
+    padding-left: 34px;
+    display: block;
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--pl);
+    margin-bottom: 10px;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+}
+.content .experience .container .section-content .item .description {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 10px);
+    margin-left: 10px;
+    vertical-align: top;
+    height: auto;
+}
+
+.pronoun-page {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--p);
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: var(--md);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: background-color 0.2s;
+}
+.pronoun-page:hover {
+    background-color: var(--md2);
+}
+.pronoun-page span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
