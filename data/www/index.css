@@ -13,6 +13,7 @@
     --m: #f5f5f5;
     --ml: #fff;
     --md: #e2e2e2;
+    --md2: #d2d2d2;
     --mt: #111;
 }
 
@@ -28,7 +29,7 @@ body {
     top: 0px;
     left: 0px;
     display: inline-block;
-    width: 10%;
+    width: 15%;
     height: 100vh;
     z-index: -10;
     background-color: var(--md);
@@ -128,6 +129,7 @@ td {
     height: 377px;
     background-color: #22222255;
     margin-bottom: -5px;
+    user-select: none;
 }
 @media only screen and (min-width: 801px) {
     #main-page .personal .dax-icon {
@@ -139,6 +141,7 @@ td {
         height: 307px;
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        pointer-events: none;
     }
     .personal .dax-name {
         color: var(--bt);
@@ -148,17 +151,15 @@ td {
         top: 120px;
         right: 377px;
     }
-    .personal .dax-username {
+    .personal .dax-summary {
         color: var(--bt);
         opacity: 0.7;
-        font-size: 2em;
+        font-size: 1.3em;
         font-weight: 300;
         position: absolute;
-        top: calc(130px + 2em);
+        top: calc(150px + 2em);
         right: 377px;
-    }
-    .personal .dax-username a {
-        color: var(--bt);
+        font-family: "Courier New", Courier, monospace;
     }
 }
 @media only screen and (max-width: 800px) {
@@ -183,35 +184,20 @@ td {
         transform: translate(-50%, 0);
         white-space: nowrap;
     }
-    .personal .dax-username {
+    .personal .dax-summary {
         color: var(--bt);
         opacity: 0.7;
-        font-size: 1.5em;
+        font-size: 1em;
         font-weight: 400;
         position: absolute;
-        top: calc(180px + 2.3em);
+        top: calc(200px + 2.3em);
         left: 50%;
         transform: translate(-50%, 0);
         white-space: nowrap;
-    }
-    .personal .dax-username a {
-        color: var(--bt);
+        font-family: "Courier New", Courier, monospace;
     }
 }
 
-.content {
-    position: relative;
-    display: inline-block;
-    width: calc(90% - 7px);
-    height: fit-content;
-    min-height: calc(100vh - 377px);
-    padding: 4px;
-    background-color: var(--m);
-    margin: 0px;
-    margin-left: -5px;
-    vertical-align: top;
-    box-sizing: border-box;
-}
 .content > div {
     display: inline-block;
     position: relative;
@@ -225,13 +211,15 @@ td {
 }
 .content .container {
     padding: 10px;
-    background-color: var(--md);
     margin-bottom: 0px;
     border-radius: 10px;
     display: inline-block;
     height: fit-content;
     width: 100%;
     box-sizing: border-box;
+    /*border-bottom: 3px solid var(--md);*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 10px -3px,
+        rgba(0, 0, 0, 0.05) 0px 2px 4px -2px;
 }
 .content .container > .title {
     font-size: 1.8em;
@@ -245,20 +233,184 @@ td {
     display: block;
     width: 40%;
     height: 2px;
-    background-color: var(--pl);
+    background-color: var(--p);
+}
+.content .container > .section-content {
+    font-size: 1.2em;
+    padding: 5px;
+}
+.content .whoami .container > .section-content .subheading {
+    position: relative;
+    padding: 5px;
+    border-bottom: 2px solid var(--pl);
+    width: 40%;
+    height: fit-content;
+    display: block;
+    font-size: 1.3em;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.content .whoami .container > .section-content .contact-links {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 48px;
+    text-align: center;
+}
+.content .whoami .container > .section-content .contact-links .link-container {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+}
+@media only screen and (min-width: 800px) {
+    .content
+        .whoami
+        .container
+        > .section-content
+        .contact-links
+        .link-container
+        .link {
+        position: relative;
+        display: inline-block;
+        height: 48px;
+        width: auto;
+        max-width: 48px;
+        background-color: var(--md);
+        overflow: hidden;
+        border-radius: 24px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 10px;
+        padding-right: 0px;
+        padding-left: 48px;
+        margin-right: 15px;
+        box-sizing: border-box;
+        transition: background-color 0.6s ease-in-out,
+            max-width 0.6s ease-in-out;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 799px) {
+    .content
+        .whoami
+        .container
+        > .section-content
+        .contact-links
+        .link-container
+        .link {
+        position: relative;
+        display: inline-block;
+        height: 48px;
+        width: fit-content;
+        background-color: var(--md);
+        overflow: hidden;
+        border-radius: 24px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 10px;
+        padding-right: 0px;
+        padding-left: 48px;
+        margin-right: 15px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+}
+.content
+    .whoami
+    .container
+    > .section-content
+    .contact-links
+    .link-container
+    .link:hover,
+.content
+    .whoami
+    .container
+    > .section-content
+    .contact-links
+    .link-container
+    .link:focus {
+    background-color: var(--md2);
+    max-width: 400px;
+}
+.content
+    .whoami
+    .container
+    > .section-content
+    .contact-links
+    .link-container
+    .link
+    .icon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    user-select: none;
+    opacity: 0.8;
+}
+.content
+    .whoami
+    .container
+    > .section-content
+    .contact-links
+    .link-container
+    .link
+    .value {
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--mt);
+    font-family: "Courier New", Courier, monospace;
+    white-space: nowrap;
+    vertical-align: middle;
 }
 
-.sections {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
-    display: inline-block;
-    width: 10%;
-    height: fit-content;
-    background-color: var(--md);
-    margin: 0px;
-    vertical-align: top;
+@media only screen and (min-width: 1000px) {
+    .sections {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        display: inline-block;
+        width: 15%;
+        height: fit-content;
+        background-color: var(--md);
+        margin: 0px;
+        vertical-align: top;
+    }
+    .content {
+        position: relative;
+        display: inline-block;
+        width: 85%;
+        height: fit-content;
+        min-height: calc(100vh - 377px);
+        padding: 4px;
+        background-color: var(--m);
+        margin: 0px;
+        margin-left: -5px;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
 }
+@media only screen and (max-width: 999px) {
+    .sections {
+        display: none;
+    }
+    .content {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: fit-content;
+        min-height: calc(100vh - 377px);
+        padding: 4px;
+        background-color: var(--m);
+        margin: 0px;
+        margin-left: 0px;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+}
+
 .sections .section {
     margin: 10px;
     margin-bottom: 0px;
